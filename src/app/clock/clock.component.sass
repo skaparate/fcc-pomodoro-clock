@@ -1,0 +1,47 @@
+.pomodoro-clock
+  background-color: #b9ffb7
+  width: 445px
+  margin: 0 auto
+  padding: 30px 30px 40px 30px
+
+.increment,
+.decrement,
+.clock-button
+  border: none
+  color: white
+  background-color: #403233
+  padding: 1rem
+  &:hover,
+  :focus
+    background-color: lighten(#403233, 10%)
+
+.increment,
+.decrement
+  border-radius: 50%
+  margin-left: 15px
+  margin-right: 15px
+
+.label,
+.label-number
+  text-align: center
+
+.label-number
+  font-family: 'Digital 7 Regular'
+  font-size: 1.5rem
+
+.clock
+  text-align: center
+
+.clock-display
+  font-family: 'Digital 7 Regular'
+  font-size: 2rem
+
+@media screen and (max-width: 500px)
+  .pomodoro-clock
+    width: auto
+
+  .float-left
+    float: none
+
+  .float-right
+    float: none

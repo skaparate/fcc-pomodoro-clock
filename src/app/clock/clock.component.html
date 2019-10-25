@@ -1,0 +1,72 @@
+<div class="pomodoro-clock clearfix">
+  <div class="break float-left">
+    <h4 id="break-label" class="label">
+      Break Length
+    </h4>
+    <div class="flex-centered">
+      <button
+        id="break-decrement"
+        class="break-decrement decrement"
+        (click)="onBreakDecrease($event)"
+      >
+        <fa-icon [icon]="faMinus"></fa-icon>
+      </button>
+      <div id="break-length" class="break-label label-number">{{ breakLength }}</div>
+      <button
+        id="break-increment"
+        class="break-increment increment"
+        (click)="onBreakIncrease($event)"
+      >
+        <fa-icon [icon]="faPlus"></fa-icon>
+      </button>
+    </div>
+  </div>
+  <!-- .break -->
+
+  <div class="clock float-left">
+    <h2 id="timer-label" class="clock-label {{ displayClasses }}">
+      {{ isSession ? 'Session' : 'Break' }}
+    </h2>
+    <h3 id="time-left" class="clock-display {{ displayClasses }}">
+      {{ display }}
+    </h3>
+    <button
+      id="start_stop"
+      class="clock-start clock-button"
+      title="Start / Pause"
+      (click)="onStartClick()"
+    >
+      <fa-icon [icon]="faPlay"></fa-icon>
+      <fa-icon [icon]="faPause"></fa-icon>
+    </button>
+    <button id="reset" class="clock-reset clock-button" title="Reset" (click)="onReset()">
+      <fa-icon [icon]="faRedoAlt"></fa-icon>
+    </button>
+    <audio id="beep" src="../../assets/analog-watch-alarm.mp3"></audio>
+  </div>
+  <!-- .clock -->
+
+  <div class="session float-left">
+    <h4 id="session-label" class="session-label label">
+      Session Length
+    </h4>
+    <div class="flex-centered">
+      <button
+        id="session-decrement"
+        class="session-decrement decrement"
+        (click)="onSessionDecrease()"
+      >
+        <fa-icon [icon]="faMinus"></fa-icon>
+      </button>
+      <div id="session-length" class="session-length-label label-number">{{ sessionLength }}</div>
+      <button
+        id="session-increment"
+        class="session-increment increment"
+        (click)="onSessionIncrease()"
+      >
+        <fa-icon [icon]="faPlus"></fa-icon>
+      </button>
+    </div>
+  </div>
+  <!-- .session -->
+</div>
