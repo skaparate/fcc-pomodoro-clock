@@ -1,6 +1,19 @@
-# FccPomodoroClock
+# The React Pomodoro Clock
+
+This project is part of My [Free Code Camp's portfolio](https://www.freecodecamp.org/learn/front-end-libraries/front-end-libraries-projects/build-a-pomodoro-clock), and [can be tested by clicking here](https://the-angular-pomodoro-clock.nicomv.com/).
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.10.
+
+## Thanks
+
+[Analog Watch Alarm](http://soundbible.com/2197-Analog-Watch-Alarm.html), which [license can be found here](https://creativecommons.org/licenses/by/3.0/).
+[Digital 7 Regular Font](https://www.1001fonts.com/digital-7-font.html), used for displaying the numbers.
+[Free Code Camp](https://freecodecamp.org/), for helping people on their developer careers.
+
+## Links
+
+[My Personal Website](https://nicomv.com/)
+[My Free Code Camp's Profile](https://freecodecamp.org/skaparate)
 
 ## Development server
 
