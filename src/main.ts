@@ -8,5 +8,7 @@ if (environment.production) {
   enableProdMode();
 }
 
+localStorage.setItem('project_selector', 'pomodoro-clock');
+
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
