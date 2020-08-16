@@ -51,6 +51,7 @@
     "typescript": "~3.5.3"
   },
   "resolutions": {
-	  "karma/**/minimist": "^0.2.1"
+    "karma/**/minimist": "^0.2.1",
+    "protractor/**/yargs-parser": "^13.1.2"
   }
 }
