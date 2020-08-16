@@ -1,5 +1,5 @@
-<div class="pomodoro-clock clearfix">
-  <div class="break float-left">
+<div class="pomodoro-clock">
+  <div class="break">
     <h4 id="break-label" class="label">
       Break Length
     </h4>
@@ -11,7 +11,9 @@
       >
         <fa-icon [icon]="faMinus"></fa-icon>
       </button>
-      <div id="break-length" class="break-label label-number">{{ breakLength }}</div>
+      <div id="break-length" class="break-label label-number">
+        {{ breakLength }}
+      </div>
       <button
         id="break-increment"
         class="break-increment increment"
@@ -23,30 +25,37 @@
   </div>
   <!-- .break -->
 
-  <div class="clock float-left">
+  <div class="clock">
     <h2 id="timer-label" class="clock-label {{ displayClasses }}">
-      {{ isSession ? 'Session' : 'Break' }}
+      {{ isSession ? "Session" : "Break" }}
     </h2>
     <h3 id="time-left" class="clock-display {{ displayClasses }}">
       {{ display }}
     </h3>
-    <button
-      id="start_stop"
-      class="clock-start clock-button"
-      title="Start / Pause"
-      (click)="onStartClick()"
-    >
-      <fa-icon [icon]="faPlay"></fa-icon>
-      <fa-icon [icon]="faPause"></fa-icon>
-    </button>
-    <button id="reset" class="clock-reset clock-button" title="Reset" (click)="onReset()">
-      <fa-icon [icon]="faRedoAlt"></fa-icon>
-    </button>
+    <div class="flex-centered">
+      <button
+        id="start_stop"
+        class="clock-start clock-button"
+        title="Start / Pause"
+        (click)="onStartClick()"
+      >
+        <fa-icon [icon]="faPlay"></fa-icon>
+        <fa-icon [icon]="faPause"></fa-icon>
+      </button>
+      <button
+        id="reset"
+        class="clock-reset clock-button"
+        title="Reset"
+        (click)="onReset()"
+      >
+        <fa-icon [icon]="faRedoAlt"></fa-icon>
+      </button>
+    </div>
     <audio id="beep" src="../../assets/analog-watch-alarm.mp3"></audio>
   </div>
   <!-- .clock -->
 
-  <div class="session float-left">
+  <div class="session">
     <h4 id="session-label" class="session-label label">
       Session Length
     </h4>
@@ -58,7 +67,9 @@
       >
         <fa-icon [icon]="faMinus"></fa-icon>
       </button>
-      <div id="session-length" class="session-length-label label-number">{{ sessionLength }}</div>
+      <div id="session-length" class="session-length-label label-number">
+        {{ sessionLength }}
+      </div>
       <button
         id="session-increment"
         class="session-increment increment"

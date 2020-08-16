@@ -3,6 +3,8 @@
   width: 445px
   margin: 0 auto
   padding: 30px 30px 40px 30px
+  display: flex
+  align-content: center
 
 .increment,
 .decrement,
@@ -31,17 +33,28 @@
 
 .clock
   text-align: center
+  background-color: azure
+  padding: 10px
 
 .clock-display
   font-family: 'Digital 7 Regular'
   font-size: 2rem
+  color: white
+  background-color: #403233
+  padding: 5px 0 10px 0
 
-@media screen and (max-width: 500px)
+.clock-start
+  display: flex
+
+@media screen and (max-width: 520px)
   .pomodoro-clock
     width: auto
+    flex-direction: column
 
-  .float-left
-    float: none
+  .clock,
+  .session
+    margin-top: 20px
 
-  .float-right
-    float: none
+  .clock-display
+    max-width: 200px
+    margin: 10px auto
